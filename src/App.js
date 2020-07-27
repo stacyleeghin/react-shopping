@@ -8,7 +8,7 @@ class App extends Component {
     this.items = [
       {
         id:1,
-        content:'eggs'
+        content:'eggs',
       },
       {
         id:2,
@@ -29,6 +29,10 @@ class App extends Component {
       {
         id:6,
         content:'beans'
+      },
+      {
+        id:7,
+        content:'icecream'
       }
     ]
 
@@ -48,12 +52,16 @@ class App extends Component {
             <div className="container1">
               
                 <ul>
-                    <li>eggs <input type="checkbox"/></li>
-                    <li>milk <input type="checkbox"/></li>
-                    <li>bacon <input type="checkbox"/></li>
-                    <li>bread <input type="checkbox"/></li>
-                    <li>butter<input type="checkbox"/></li>
-                    <li>beans<input type="checkbox"/></li>
+                  {
+                    this.items.map((item)=>{
+
+                      return (
+                      <li>{item.content} <input type="checkbox"/></li>
+                      )
+                    })
+                  }
+                    
+                    
                 </ul>
             </div>
         </div>
